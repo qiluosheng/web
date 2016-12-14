@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> new document </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+    <script type="text/javascript">
+        var name="吴卓羲 游鸿明 胡宇崴 张震岳 汤镇业 黄立行 苗侨伟 周星驰 温升豪 萧敬腾 窦智孔 陈汉典 郑伊健 陈国坤 张信哲 范逸臣 王绍伟 辰亦儒 张卫健 周汤豪 成龙 林志颖 苏有朋 温兆伦 吴建豪 黄家驹 卢广仲 林文龙 赵又廷 刘德华 周传雄 李治廷 周华健 钟镇涛 周渝民 陈柏霖 邱心志 陈百强 郑元畅 王杰 狄龙 郭富城 光良 黄浩然 彭于晏 马浚伟 蓝正龙 林佑威 杜德伟 费翔 许志安 黄义达 黄耀明 陈键锋 王喜 黄贯中 江华 贺一航 郑少秋 蔡康永 陈伟霆 黄宗泽 刘畊宏 梁家辉 林志炫 赵文卓 樊少皇 连凯 吴镇宇 哈狗帮 吴尊 张国荣 方大同 刘松仁 郑嘉颖 周柏豪 王祖蓝 古巨基 萧正楠 邹兆龙 李铭顺 吴奇隆 金城武 李圣杰 陈建州 余文乐 罗志祥 吴启华 李克勤 秦汉 单立文 汪东城 莫少聪 陈冠希 黄秋生 罗嘉良 欧弟 马国明 范植伟 阮经天 郑中基 张智霖 麦浚龙 林宥嘉 姜大卫 陈浩民 杰西达邦 刘青云 黄子华 丁子高 童安格 王力宏 卢广仲 阿杜 方中信 孙兴 陈奕迅 周定纬 林子祥 任达华 黄志玮 陈晓东 潘玮柏 黄日华 张学友 陈柏宇 言承旭 郭品超 周润发 陈楚河 周杰伦 何家劲 张栋梁 谢霆锋 古天乐 甄子丹 梁朝伟 房祖名 叶世荣 张孝全 侧田 立威廉 李灿森 谭咏麟 曹格 方文山 安志杰 黎明 陈司翰 朱孝天 王子 敖犬 黄维德 张家辉 赵文瑄 吕良伟 关智斌 张耀扬 何润东 钟汉良 马德钟 林俊杰 齐秦 高以翔 焦恩俊 张雨生 任贤齐 杜汶泽 孙协志 林峰 吕颂贤 马景涛 许绍洋 吴彦祖 阿信 贺军翔 张智尧 冯德伦 TAE 陈小春 明道 黄靖伦 元彪 麻吉弟弟 孙耀威 唐禹哲 刘德凯 信 杨佑宁 吴克群 霍建华 邱泽 吴青峰 欧阳震华 李小龙 李威 张宇 方力申 洪卓立 炎亚纶 庾澄庆";
+        var arrName=name.split(" ");
+        window.onload = function () {
+            myload();
+        }
+        function myload() {
+            var el_tr = document.getElementsByTagName("tr");
+            for (var i = 0; i < el_tr.length; i++) {
+                console.log(el_tr[i].nodeName);
+                el_tr[i].onmouseenter = function () {
+                    this.style.backgroundColor = ' #f2f2f2';
+                };
+                el_tr[i].onmouseout = function () {
+                    this.style.backgroundColor = ' #fff';
+                };
+            }
+        }
+        // 编写一个函数，供添加按钮调用，动态在表格的最后一行添加子节点；
+        function apptr() {
+            //随机名字
+            var randomName=arrName[Math.floor(arrName.length*Math.random())];
+            var old = document.getElementsByTagName("tbody")[0];
+            var newel = document.createElement("tr");
+            newel.innerHTML=old.children[1].innerHTML;
+            newel.children[1].innerText=randomName;
+            old.appendChild(newel);
+        }
+        function deltr(obj) {
+            var tr = obj.parentNode.parentNode;
+            tr.parentNode.removeChild(tr);
+        }
+
+
+    </script>
+</head>
+<body>
+<table border="1" width="50%" id="table">
+    <thead>
+    <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>xh001</td>
+        <td>王小明</td>
+        <td><a href="javascript:;" onclick="deltr(this)">删除</a></td>
+    </tr>
+
+    <tr>
+        <td>xh002</td>
+        <td>刘小芳</td>
+        <td><a href="javascript:;" onclick="deltr(this)">删除</a></td>
+    </tr>
+    </tbody>
+</table>
+<input type="button" value="添加一行"  onclick="apptr()"/>
+</body>
+</html>

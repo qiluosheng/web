@@ -1,0 +1,177 @@
+*{  margin: 0;  padding: 0;  }
+body{ font-size: 12px;}
+img{border: none}
+li{list-style-type: none}
+input,select,textarea{outline: none}
+a{text-decoration: none;color: #656565}
+/*清除浮动*/
+.clerafix:after{content:'';display: block;clear:both;}
+.clerafix{zoom:1;}
+
+.comWidth{
+    width: 1000px;
+    margin: 0 auto;
+}
+.headerBar{width: 100%}
+    .topBar{
+        background-color: #F7F7F7;
+        height: 31px;
+        line-height: 31px;
+    }
+    .leftArea{float: left;}
+    .rightArea{float: right}
+    .collection{
+        background: url("../img/icon/collection.jpg") no-repeat left center;
+        padding-left: 19px;
+        font-weight: bold;
+    }
+    .rightArea a:hover{color: red}
+.logoBar{height: 85px;background-color: #1D7AD9}
+    .logo{
+        padding-left: 41px;
+        padding-top: 13px;
+        float: left;
+    }
+    .search_box{
+        float: left;
+        padding-top: 23px;
+        padding-left: 185px;
+        width: 430px;
+    }
+    .search_box .search_text{
+        width: 350px;
+        height: 35px;
+        border: none;
+        float: left;
+        padding-left: 10px;
+    }
+    .search_box .search_btn{
+        background-color: #FF8C00;
+        width: 70px;
+        height: 35px;
+        line-height: 35px;
+        border: none;
+        font-size: 14px;
+        font-family: "微软雅黑";
+        color: white;
+        float: right;
+    }
+    .shopCar{
+        width: 145px;
+        height: 35px;
+        background-color: #FF8C00;
+        margin-top: 23px;
+        float: right;
+        margin-left: 50px;
+    }
+        .shopText{
+            font-size: 14px;
+            color: #FFFFFF;
+            width: 87px;
+            height: 100%;
+            border-right:1px solid #E27A00;
+            line-height: 35px;
+            float: left;
+            background: url("../img/icon/shaoIcon.jpg") 10px center no-repeat;
+            text-indent: 40px;
+        }
+        .shopNum{
+            width: 56px;
+            font-size: 14px;
+            color: #FFFFFF;
+            line-height: 35px;
+            border-left:1px solid #E27A00;
+            height: 100%;
+            float: left;
+            background: url("../img/icon/sj.jpg") 33px center no-repeat;
+            text-indent: 10px;
+        }
+    .navBox{
+        height: 35px;
+        background-color: #1369C0;
+        color: #FFF;
+    }
+        .shopClass{
+            width: 190px;
+            line-height: 35px;
+            text-align: center;
+            float: left;
+            position: relative;
+        }
+            .shopClass i{
+                width: 11px;
+                height: 7px;
+                overflow: hidden;
+                background: url("../img/icon/down.jpg") left center no-repeat;
+                display: inline-block;
+                margin-left: 11px;
+            }
+    .nav,.shopClass{font-family: "微软雅黑"}
+    .nav {line-height: 35px;float: left}
+    .nav li{float: left}
+    .nav a{
+        height: 35px;
+        display: inline-block;
+        padding: 0 35px;
+        color: #FFF;
+    }
+    .nav .active{background-color: #4593FD}
+
+    .shopClass_show{
+        background-color: #4593FD;
+        position: absolute;
+        top:35px;
+        left: 0;
+        width: 100%;
+    }
+    dl.shopClass_item{
+        padding: 13px 10px;
+        border-bottom:1px solid #3487F2;
+        border-top: 1px solid #5AA1FE;
+        line-height: 16px;
+    }
+    .shopClass_item dt{
+        height: 21px;
+        line-height: 1;
+        overflow: hidden;
+        background: url(../img/icon/shop_sj.jpg) right center no-repeat;
+    }
+    .shopClass_show a{color: white}
+    .shopClass_item .aLink{
+        width: 48px;
+        height: 20px;
+        background: url(../img/icon/aLink_bg.png) left center no-repeat;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        text-decoration: underline;
+    }
+    .banner{
+        margin-bottom: 15px;
+    }
+        .banner_big{
+            width: 810px;
+            height: 326px;
+        }
+        .banner_bar {
+            float: right;
+            position: relative;
+            overflow: hidden;
+        }
+            .imgNum{
+                position: absolute;
+                left: 0;
+                bottom: 15px;
+                width: 100%;
+                text-align: center;
+            }
+                .imgNum a {
+                    width: 20px;
+                    height: 5px;
+                    background-color: white;
+                    display: inline-block;
+                    margin: 0 3px;
+                }
+            .imgNum .active {
+                background-color: #FF7700;
+            }
